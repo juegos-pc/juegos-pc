@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: gray;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: black;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Envíanos un mensaje</h2>
+
+        <form action="https://formspree.io/f/mblgaowd" method="POST">
+
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="subject">Asunto:</label>
+            <select id="subject" name="subject" required>
+                <option value="pedir">Pedir</option>
+                <option value="link caido">Link Caído</option>
+                <option value="juego roto">Juego Roto</option>
+                <option value="Juego no funciona">Juego no funciona</option>
+            </select>
+        
+            <label for="message">Juego:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        
+            <button type="submit">ENVIAR</button>
+        </form>
+        
+    </section>
+
+</body>
+</html>

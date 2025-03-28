@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+            font-family: 'Arial', sans-serif;
+            background: gray;
+            margin: 0;
+            padding: 20px;
+            color: #ffffff;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* Estilo para los enlaces de texto */
+        .copy-text {
+            cursor: pointer;
+            color: #007BFF;
+            text-decoration: underline;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .copy-text:hover {
+            background-color: #000000;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .copy-text:active {
+            background-color: #0056b3;
+        }
+
+        /* Lista de palabras */
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        /* Estilo para el mensaje de éxito */
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+
+
+        /* Animación de desaparición del mensaje */
+        .message.fade {
+            animation: fadeOut 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+            }
+        }
+</style>
+
+<body>
+
+    <h1>contraseñas para descomprimir</h1>
+
+<p>Haz clic en la palabra para copiarla:</p>
+
+<ul>
+    <li><span class="copy-text" data-copy="zonleros">zonleros</span></li>
+    <li><span class="copy-text" data-copy="otro">otro</span></li>
+    <li><span class="copy-text" data-copy="otro">otro</span></li>
+    <li><span class="copy-text" data-copy="otro">otro</span></li>
+    <li><span class="copy-text" data-copy="otro">otro</span></li>
+</ul>
+
+<div class="message" id="successMessage" style="display:none;">
+    ¡La palabra se ha copiado al portapapeles!
+</div>
+
+<script>
+    // Seleccionamos todos los elementos con la clase "copy-text"
+    const copyWordElements = document.querySelectorAll('.copy-text');
+
+    // Recorremos todos los elementos y agregamos el evento de clic
+    copyWordElements.forEach(function(element) {
+        element.addEventListener('click', function() {
+            // Obtenemos el texto de la palabra que se quiere copiar (almacenado en el atributo data-copy)
+            const textToCopy = element.getAttribute('data-copy');
+
+            // Usamos la API moderna de clipboard para copiar el texto
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                const successMessage = document.getElementById('successMessage');
+                successMessage.style.display = 'block';
+
+                // Ocultar el mensaje después de 2 segundos
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Error al copiar al portapapeles: ', err);
+            });
+        });
+    });
+</script>
+    
+</body>
+</html>

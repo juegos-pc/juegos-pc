@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <nav>
+            <ul>
+                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="contraseñas.html">CONTRASEÑAS</a></li>
+            </ul>
+        </nav>
+
+        <!-- Barra de búsqueda al lado derecho -->
+        <div class="search-container">
+            <input type="text" id="search" class="search-input" placeholder="BUSCAR JUEGOS..." onkeyup="filterGames()">
+        </div>
+    </div>
+
+
+    <div class="game-list" id="gameList">
+
+        <!--JUEGOS-->
+
+        <div class="game-item" onclick="openModal('resident evil 2 remake edition deluxe', 
+    [
+        { url: 'https://www.mediafire.com/file/3w1lc0po7c6kxsi/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/i59uq0rnj3hiy0r/Resi2dentEvi2l220219D2E-13.06.2022-_ZonaLeRoS.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/c9usqdfe1zv9ca0/Resi2dentEvi2l220219D2E-13.06.2022-_ZonaLeRoS.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/uszov6fhbnrgsif/Resi2dentEvi2l220219D2E-13.06.2022-_ZonaLeRoS.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/pcausc1tq41hhk4/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/7o27c67n3yrvsv1/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/smkt5oknvb8nyxg/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/9d4kd5phgqsvsr8/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/6i6wwug6j82u72k/Resi2dentEvi2l220219D2E-13.06.2022-+ZonaLeRoS.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/m37825l1aep3kcr/R322K09S3+Update14.08.2023+ZL.rar/file', name: 'UPDATE' }
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0608/Oxr3X0TU9BRhpgweQoq5AGgy.png"
+                alt="img">
+            <h3>resident evil 2 remake edition deluxe</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('Resident Evil 4: Ultimate HD Edition', 
+    [
+        { url: 'https://www.mediafire.com/file/cfqomhqtn9v5yh8/R4eside4ntEv4il4Ultima4teHDZL-+ZonaLeRoS.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/5x6vxx2kcktk7nu/R4eside4ntEv4il4Ultima4teHDZL-+ZonaLeRoS.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/h3eh31e2ze0uo2n/R4eside4ntEv4il4Ultima4teHDZL-+ZonaLeRoS.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/cmizdkz2m1xt020/R4eside4ntEv4il4Ultima4teHDZL-+ZonaLeRoS.part4.rar/file', name: 'ENLACE 04' },
+    ])">
+            <img src="https://i.pinimg.com/474x/1d/af/db/1dafdbd7d95cadab0f6ecee94ada1452.jpg" alt="img">
+            <h3>Resident Evil 4: Ultimate HD Edition</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('resident evil 4 remake', 
+    [
+        { url: 'https://www.mediafire.com/file/6ra44zm5czba0sg/R351D3NT4R3M4K3_ZL.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/g432a8i1fu3p1u6/R351D3NT4R3M4K3_ZL.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/xg76st4vavrpy9z/R351D3NT4R3M4K3_ZL.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/gap425sba2bk4fy/R351D3NT4R3M4K3_ZL.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/tx0d3bfi9zekjhn/R351D3NT4R3M4K3_ZL.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/yedtlsom5xvh5rp/R351D3NT4R3M4K3_ZL.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/er7i5e5bxz5z1z6/R351D3NT4R3M4K3_ZL.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/dk2h3q9tn2kg7xf/R351D3NT4R3M4K3_ZL.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/jt07k1d1a0k366h/R351D3NT4R3M4K3_ZL.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/7j3zonc88p016hs/R351D3NT4R3M4K3_ZL.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/sop8i25k8dbnj38/R351D3NT4R3M4K3_ZL.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/fm7yl6bjfrt49yc/R351D3NT4R3M4K3_ZL.part12.rar/file', name: 'ENLACE 12' },
+        { url: 'https://www.mediafire.com/file/r90qs6onimccuys/Resid4entE4vil4202-CrackFixWin11_ZL.rar/file', name: 'UPDATE (SOLO WIN 11)' }
+    ])">
+            <img src="https://i.3djuegos.com/juegos/18541/resident_evil_4_remake/fotos/ficha/resident_evil_4_remake-5789986.webp"
+                alt="img">
+            <h3>resident evil 4 remake</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('resident evil 6', 
+    [
+        { url: 'https://www.mediafire.com/file/qc1fyd4l831z76m/R3S1D3NTEV1L6v1.1.0_ZonaLeRoS.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/1qhxyey4hqrw10a/R3S1D3NTEV1L6v1.1.0_ZonaLeRoS.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/h4lwebr12w7uxi1/R3S1D3NTEV1L6v1.1.0_ZonaLeRoS.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/o9nayy2o8d9z75z/R3S1D3NTEV1L6v1.1.0_ZonaLeRoS.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/mvqf39yu2shrbtl/R3S1D3NTEV1L6v1.1.0_ZonaLeRoS.part5.rar/file', name: 'ENLACE 05' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/12859/resident_evil_6__2016_/fotos/ficha/resident_evil_6__2016_-3314290.webp"
+                alt="img">
+            <h3>resident evil 6</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Poppy playtime capitulo 1,2,3 y 4', 
+    [
+        { url: 'https://www.mediafire.com/file/3k9g2h52hw2c51b/Pop8pyPlayti5me-30.01.2025-elamigos.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/8nn5aurm4lsm10n/Pop8pyPlayti5me-30.01.2025-elamigos.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/g7u7vn28gkn7ez5/Pop8pyPlayti5me-30.01.2025-elamigos.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/twupostd26il7oa/Pop8pyPlayti5me-30.01.2025-elamigos.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/48cszter09zfil7/Pop8pyPlayti5me-30.01.2025-elamigos.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/u92e2xpvuwxyl7l/Pop8pyPlayti5me-30.01.2025-elamigos.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/cjkntv4gl3088k9/Pop8pyPlayti5me-30.01.2025-elamigos.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/juel3twimq8tkgr/Pop8pyPlayti5me-30.01.2025-elamigos.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/an3vw8z4mcz0qmo/Pop8pyPlayti5me-30.01.2025-elamigos.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/w33nw9wwczyk0ha/Pop8pyPlayti5me-30.01.2025-elamigos.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/bm7k4e8anwqkcxo/Pop8pyPlayti5me-30.01.2025-elamigos.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/2ryo9j1r6f1cntn/Pop8pyPlayti5me-30.01.2025-elamigos.part12.rar/file', name: 'ENLACE 12' },
+        { url: 'https://www.mediafire.com/file/iqgifp54f620k1g/Pop8pyPlayti5me-30.01.2025-elamigos.part13.rar/file', name: 'ENLACE 13' },
+        { url: 'https://www.mediafire.com/file/5jocsmvpxyddqb4/Pop8pyPlayti5me-30.01.2025-elamigos.part14.rar/file', name: 'ENLACE 14' },
+        { url: 'https://www.mediafire.com/file/z2x59gneeatwcz6/Pop8pyPlayti5me-30.01.2025-elamigos.part15.rar/file', name: 'ENLACE 15' },
+        { url: 'https://www.mediafire.com/file/fy2puopzt112lyw/Pop8pyPlayti5me-30.01.2025-elamigos.part16.rar/file', name: 'ENLACE 16' },
+        { url: 'https://www.mediafire.com/file/gbz7knzlo7zjycn/Pop8pyPlayti5me-30.01.2025-elamigos.part17.rar/file', name: 'ENLACE 17' },
+        { url: 'https://www.mediafire.com/file/yptbbpxhf4e1b8b/Pop8pyPlayti5me-30.01.2025-elamigos.part18.rar/file', name: 'ENLACE 18' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/18221/poppy_playtime/fotos/ficha/poppy_playtime-5543028.jpg"
+                alt="img">
+            <h3>poppy playtime</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Assassins Creed Valhalla', 
+    [
+        { url: 'https://www.mediafire.com/file/b5mvpp9d1qw81hj/455CRV4LC0M3Dv1.7.0_ZL.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/kxzv41thlej3inx/455CRV4LC0M3Dv1.7.0_ZL.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/2gkmmxuq5hbton3/455CRV4LC0M3Dv1.7.0_ZL.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/g535usdtf7hbgb6/455CRV4LC0M3Dv1.7.0_ZL.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/83zvaye5cv7u7u6/455CRV4LC0M3Dv1.7.0_ZL.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/nsaxk48it1hjgwn/455CRV4LC0M3Dv1.7.0_ZL.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/89hf23dg0nqx9fg/455CRV4LC0M3Dv1.7.0_ZL.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/piooh9p5608r4rb/455CRV4LC0M3Dv1.7.0_ZL.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/5nm0yzba5t4729o/455CRV4LC0M3Dv1.7.0_ZL.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/emnmk0y9j8m4jsg/455CRV4LC0M3Dv1.7.0_ZL.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/mlnnrqpmmlqcq8g/455CRV4LC0M3Dv1.7.0_ZL.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/4tnvk2dgn4ygrfd/455CRV4LC0M3Dv1.7.0_ZL.part12.rar/file', name: 'ENLACE 12' },
+        { url: 'https://www.mediafire.com/file/k4mpwf8iv13g5au/455CRV4LC0M3Dv1.7.0_ZL.part13.rar/file', name: 'ENLACE 13' },
+        { url: 'https://www.mediafire.com/file/zl12xdj8073nhcg/455CRV4LC0M3Dv1.7.0_ZL.part14.rar/file', name: 'ENLACE 14' },
+        { url: 'https://www.mediafire.com/file/ieqxfhhoxktcqei/455CRV4LC0M3Dv1.7.0_ZL.part15.rar/file', name: 'ENLACE 15' },
+        { url: 'https://www.mediafire.com/file/a7mb5cbgk5axxq4/As1sas5sinsCValha6ll-CrackFixWin11_ZL.rar/file', name: 'update (solo win 11)' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfiFv1vxtV4eRbXRdkf_-LBj1_1OM8ajoxxg&s"
+                alt="img">
+            <h3>Assassin's Creed Valhalla</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('little nightmares 1', 
+    [
+        { url: 'https://drive.google.com/file/d/12Pyt9V7KWBcLHo9lfKI_J1JS2pK_5ltt/view', name: 'ENLACE 01' },
+    ])">
+            <img src="https://images.cdn3.buscalibre.com/fit-in/360x360/98/1f/981fd5f050d8e3832a89c56215ba8036.jpg"
+                alt="img">
+            <h3>little nightmares 1</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('little nightmares 2', 
+    [
+        { url: 'https://www.mediafire.com/file/uzoggqf4weu8inx/L1t2tl3N1ght2m4r23sII-21.10.2021.zonaleros.info.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/iq2v13gwn73n0ep/L1t2tl3N1ght2m4r23sII-21.10.2021.zonaleros.info.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/neaog071a279sld/L1t2tl3N1ght2m4r23sII-21.10.2021.zonaleros.info.part3.rar/file', name: 'ENLACE 03' },
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202011/1819/m7gCTrMRQBTPHi87Mi3leVVY.jpg"
+                alt="img">
+            <h3>little nightmares 2</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('overcooked 1', 
+    [
+        { url: 'https://www.mediafire.com/file/4manilqp2t9c0e5/O4v3rc070k3d-25.11.2017.zonaleros.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStqNiTzi7Yd4xyopb5_sq8LkXSAea7n231NA&s"
+                alt="img">
+            <h3>overcooked 1</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('overcooked 2', 
+    [
+        { url: 'https://www.mediafire.com/file/3cdm6g3efkuqejx/Ov32rc002k3d2-26.05.2022.zonaleros.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/6a85u9nz647ezba/Ov32rc002k3d2-26.05.2022.zonaleros.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/gaewy9nikjaztp9/Ov32rc002k3d2-26.05.2022.zonaleros.part3.rar/file', name: 'ENLACE 03' },
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/img/cfn/11307bEskTfSij9cY91PAbL4Asz425G35YGllLqiSPUd_T9kLPLphROTklNtob4UUQntuct-mfXYD75s0WORnivvopUm8mIv.png"
+                alt="img">
+            <h3>overcooked 2</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('minecraft dungeons', 
+    [
+        { url: 'https://drive.google.com/file/d/1-wKXBBB99SiITyXxPWxFv8v2CXqO2io8/view', name: 'ENLACE 01' },
+    ])">
+            <img src="https://image.api.playstation.com/gs2-sec/appkgo/prod/CUSA18779_00/4/i_c7b0467e8d83d7fa53d63d40a50e65e5da0edc39e07306e356cf5a6f2aba1977/i/icon0.png"
+                alt="img">
+            <h3>minecraft dungeons</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('minecraft legends', 
+    [
+        { url: 'http://www.mediafire.com/file/ulim2b1prtwa4dk', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/v3fwlgwhhocf020', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/4sdu5p6jxwsme3j', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/gsc5b7icq4tpss4', name: 'ENLACE 04' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/18574/minecraft_legends/fotos/ficha/minecraft_legends-5682800.jpg"
+                alt="img">
+            <h3>minecraft legends</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('ned for speed shift', 
+    [
+        { url: 'https://www.mediafire.com/file/l65qvoeip9w2z9w/NFSH1FT1.02+ZonaLeRoS.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/ghmxvw916o35ku6/NFSH1FT1.02+ZonaLeRoS.part2.rar/file', name: 'ENLACE 02' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/3704/need_for_speed_shif/fotos/ficha/need_for_speed_shif-1693830.jpg"
+                alt="img">
+            <h3>need for speed</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('outlast', 
+    [
+        { url: 'https://www.mediafire.com/file/nek9xcztym71hfl/083tl45stC0m7pl31t33.zonaleros.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://cdn1.epicgames.com/offer/78f42129096d4233bccc527733debfbd/EGS_Outlast_RedBarrels_S2_1200x1600-b02ebdfb4bcd3b1d608ab5b87257b3c4"
+                alt="img">
+            <h3>outlast</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('', 
+    [
+        { url: 'https://www.mediafire.com/file/hns7w3gnvg9ofy6', name: 'ENLACE 01' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Lwp2wAu1_uoEwPNMFMMxMocS2DpdcheKrw&s"
+                alt="img">
+            <h3>cult of the lamb</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('dak souls prepare to die', 
+    [
+        { url: 'https://www.mediafire.com/file/34i0vxa1fny5s8n/D41rkS018lsPr3p14r3tD1133.zonaleros.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://i.ebayimg.com/images/g/920AAOSwRZ5kVGOT/s-l400.jpg" alt="img">
+            <h3>dark souls prepare to die</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('7 days to die', 
+    [
+        { url: 'http://www.mediafire.com/file/s6cva8y207343e3', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/grh8s17ynevrq96', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/eti59w6fcefacvu', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/9m8n18i2pdfrtxz', name: 'ENLACE 04' },
+        { url: 'http://www.mediafire.com/file/dxc09xx70eexmow', name: 'ENLACE 05' },
+        { url: 'http://www.mediafire.com/file/jhrwbx1x23zba41', name: 'ENLACE 06' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/9950/7_days_to_die/fotos/ficha/7_days_to_die-5891682.webp"
+                alt="img">
+            <h3>7 days to die</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Battleblock Theater', 
+    [
+        { url: 'https://www.mediafire.com/file/j9w99ecvxe8et8g/BattleBlock.Theater.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/3951/behemoth_project__nombre_temporal_/fotos/ficha/behemoth_project__nombre_temporal_-2229768.webp"
+                alt="img">
+            <h3>Battleblock theather</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('dead island 1', 
+    [
+        { url: 'https://www.mediafire.com/file/jlrmk546t88j5gd/Dead.Island.Game.Of.The.Year.Edition.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/kxwczlyamy1n4o6/Dead.Island.Game.Of.The.Year.Edition.part2.rar/file', name: 'ENLACE 02' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/8881/dead_island__game_of_the_year_edition/fotos/ficha/dead_island__game_of_the_year_edition-2012076.webp"
+                alt="img">
+            <h3>dead island 1</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('dead island ', 
+    [
+        { url: 'https://www.mediafire.com/file/uknij1gagrg3hd6/D324dIsl24nd2.zonaleros.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/shftyiol33mo0u1/D324dIsl24nd2.zonaleros.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/1y5an77qc68g9d9/D324dIsl24nd2.zonaleros.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/27ph7gw2138kpg3/D324dIsl24nd2.zonaleros.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/jq7stkwpo5qh6vn/D324dIsl24nd2.zonaleros.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/ybuaxz9898gr8ob/D324dIsl24nd2.zonaleros.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/4pwf25s7otmyxx9/D324dIsl24nd2.zonaleros.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/dp5b5dxtdnw8i2p/D324dIsl24nd2.zonaleros.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/lpp9pnx1bsgunoh/D324dIsl24nd2.zonaleros.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/te8hecznkrziitv/D324dIsl24nd2.zonaleros.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/whl0fxxmc5a0ojc/D324dIsl24nd2.zonaleros.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/ltz2gmckipn079z/D324dIsl24nd2.zonaleros.part12.rar/file', name: 'ENLACE 12' },
+        { url: 'https://www.mediafire.com/file/9hlu6rib3c5eyx5/D324dIsl24nd2.zonaleros.part13.rar/file', name: 'ENLACE 13' },
+        { url: 'https://www.mediafire.com/file/noee4iaeivxnabe/D324dIsl24nd2.zonaleros.part14.rar/file', name: 'ENLACE 14' },
+        { url: 'https://www.mediafire.com/file/1nln4j6oonx8fed/D324dIsl24nd2.zonaleros.part15.rar/file', name: 'ENLACE 15' },
+        { url: 'https://www.mediafire.com/file/ufctyy3hutld4fv/D324dIsl24nd2.zonaleros.part16.rar/file', name: 'ENLACE 16' },
+        { url: 'https://www.mediafire.com/file/k863r4n9g2mjhnd/De2adIsl2and-CrackFixWin11+ZL.rar/file', name: 'update solo win 11' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCB5Vtoc03X3eexdppRmPMY7pPw2d5xbqImg&s"
+                alt="img">
+            <h3>dead island </h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('dragon ball sparking zero', 
+    [
+        { url: 'https://www.mediafire.com/file/w4g7hfxuovhotuz/Dra0gonBSpa0rkingZE0-Update04.03.2025-elamigos.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5sihBLbq23fhITa93rgExBpjY-AcfW9Vcbg&s"
+                alt="img">
+            <h3>dragon ball sparking zero</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('SpongeBob', 
+    [
+        { url: 'https://www.mediafire.com/file/pegfzux0obmyqwm/Sp04ng3B0bSBfBBR3hy3dr4t3d-17.12.2020.zonaleros.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/sqix5mv1ga0bh70/Sp04ng3B0bSBfBBR3hy3dr4t3d-17.12.2020.zonaleros.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/dj4orzxf04dmadt/Sp04ng3B0bSBfBBR3hy3dr4t3d-17.12.2020.zonaleros.part3.rar/file', name: 'ENLACE 03' },
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202006/1814/aglGICQMUl73037QEhSl7Avk.png"
+                alt="img">
+            <h3>SpongeBob</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('blur', 
+    [
+        { url: 'https://www.mediafire.com/file/a3xyet898687d8l/BLUR_ZonaLeRoS.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/tcu3neepvzpaznd/BLUR_ZonaLeRoS.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/f1zdj4qnlxc2wl3/BLUR_ZonaLeRoS.part3.rar/file', name: 'ENLACE 03' },
+    ])">
+            <img src="https://assetsio.gnwcdn.com/co4azn.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp"
+                alt="img">
+            <h3>blur</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('The Legend of Zelda Breath of the Wild', 
+    [
+        { url: 'https://www.mediafire.com/file/pf3uy2s21g2slc6/L3G0FZ3LD4BR3THW1LDv1.5.0_ZL.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/7dyum2oklhm9vtb/L3G0FZ3LD4BR3THW1LDv1.5.0_ZL.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/7drn8c4152yngjc/L3G0FZ3LD4BR3THW1LDv1.5.0_ZL.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/xfx13khx6veljgf/L3G0FZ3LD4BR3THW1LDv1.5.0_ZL.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/g3us4xy1rj5zqth/L3G0FZ3LD4BR3THW1LDv1.5.0_ZL.part5.rar/file', name: 'ENLACE 05' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShGl8frrmMD-xq62jBrPqbFk_a2nijjfeTdw&s"
+                alt="img">
+            <h3>The Legend of Zelda Breath of the Wild</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('The Legend of Zelda: Tears of the Kingdom', 
+    [
+        { url: 'https://www.mediafire.com/file/xptvr8f5a2rkque/TZ3LD44TK1NGDv1.0.0_ZL.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/7a8cvx51z14n2s7/TZ3LD44TK1NGDv1.0.0_ZL.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/7n7rrazn7e2wx3u/TZ3LD44TK1NGDv1.0.0_ZL.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/mp07oxsrpnju3mo/TZ3LD44TK1NGDv1.0.0_ZL.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/dh6edmvyw9hpirr/TZ3LD44TK1NGDv1.0.0_ZL.part5.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/czh0itd603asqnj/TZ3LD44TK1NGDv1.0.0_ZL.part6.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/9yi9a6khf6of3af/TZ3LD44TK1NGDv1.0.0_ZL.part7.rar/file', name: 'ENLACE 07' },
+    ])">
+            <img src="https://assetsio.gnwcdn.com/co5vmg.png?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="img">
+            <h3>The Legend of Zelda: Tears of the Kingdom</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Assassins Creed Rogue', 
+        [
+            { url: 'https://www.mediafire.com/file/o33mn9d1wduzr93/As5s4s5s16nsCr353dR70g831.1.0.zonaleros.part1.rar/file', name: 'ENLACE 01' },
+            { url: 'https://www.mediafire.com/file/zgnam3uy86o9ak8/As5s4s5s16nsCr353dR70g831.1.0.zonaleros.part2.rar/file', name: 'ENLACE 02' },
+            { url: 'https://www.mediafire.com/file/5p9n5o88qyjzwvu/As5s4s5s16nsCr353dR70g831.1.0.zonaleros.part3.rar/file', name: 'ENLACE 03' },
+            { url: 'https://www.mediafire.com/file/78u321flsljj2pu/As5s4s5s16nsCr353dR70g831.1.0.zonaleros.part4.rar/file', name: 'ENLACE 04' },
+        ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1fPimn0m-Kkx-HwxZV8P6x9pmYHsyJcuBw&s"
+                alt="img">
+            <h3>Assassins Creed Rogue</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('Dying Light', 
+    [
+        { url: 'https://www.mediafire.com/file/dcmr8g6lym9ux3v/DY1NGL1v1.49.3_ZL.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/93fbe9jpvbormax/DY1NGL1v1.49.3_ZL.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/8k0icji84sgczfs/DY1NGL1v1.49.3_ZL.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/873b8f13vku877z/DY1NGL1v1.49.3_ZL.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/xlawcft09zs8our/DY1NGL1v1.49.3_ZL.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/l8p2rs2yowmsorq/DY1NGL1v1.49.3_ZL.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/av0mqw3zj77rijj/DY1NGL1v1.49.3_ZL.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/14rs51qau7d0cg4/DY1NGL1v1.49.3_ZL.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/q8fk1dzc38vnr55/DY1NGL1v1.49.3_ZL.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/y68l3vmoa86oetm/DY1NGL1v1.49.3+ZL.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/1yv73x2h8ceqa94/DY1NGL1G_Update1.49.0H7_ZL.rar/file', name: 'update' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cMM9NfmDwpbNOFQUvMSHUm5wlWEqVclcsw&s"
+                alt="img">
+            <h3>Dying Light</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('Tomb Raider Definitive Edition', 
+    [
+        { url: 'https://www.mediafire.com/file/2eezqscjbac1df3/T0MBR41D3R2013v1.01_ZonaLeRoS.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/ua2oj0yai31pk8u/T0MBR41D3R2013v1.01_ZonaLeRoS.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/ol0hy9d1e3d0313/T0MBR41D3R2013v1.01_ZonaLeRoS.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/8vfimuch6emzty9/T0MBR41D3R2013v1.01_ZonaLeRoS.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/ksq71yagblvx0l1/T0MBR41D3R2013v1.01_ZonaLeRoS.part5.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/vo1dh2sv9aa08fr/T0MBR41D3R2013v1.01_ZonaLeRoS.part6.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/8izcua25mi7kov9/T0MBR41D3R2013v1.01_ZonaLeRoS.part7.rar/file', name: 'ENLACE 07' },
+    ])">
+            <img src="https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2019%2F11%2F11%2Fcover%2F812985351573513115.jpg?auth=acb82139eaee91c6422b6c526f5ce01abe6237ceb56d0f818302bedf4aa8288b&width=140&height=210&smart=true"
+                alt="img">
+            <h3>Tomb Raider Definitive Edition</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('IT TAKES TWO', 
+    [
+        { url: 'https://www.mediafire.com/file/lyxvf4pkmy3to4x/1tT4k23sT2w0-1.0.0.4.zonaleros.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/jthfi4rk0svnx9x/1tT4k23sT2w0-1.0.0.4.zonaleros.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/ylixywteeg7v3ed/1tT4k23sT2w0-1.0.0.4.zonaleros.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/mqm9jncj2son7e0/1tT4k23sT2w0-1.0.0.4.zonaleros.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/ffx61t17d1irij6/1tT4k23sT2w0-1.0.0.4.zonaleros.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/i8aonsx5nzfh6m0/1tT4k23sT2w0-1.0.0.4.zonaleros.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/ze1gj91iyimo7qf/1tT4k23sT2w0-1.0.0.4.zonaleros.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/mx59rojsety7gh3/1tT4k23sT2w0-1.0.0.4.zonaleros.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/vej8y70sc453b11/1tT4k23sT2w0-1.0.0.4.zonaleros.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/trqzzr7ehd2d9m0/1tT4k23sT2w0-1.0.0.4.zonaleros.part10.rar/file', name: 'ENLACE 10' },
+    ])">
+            <img src="https://i.3djuegos.com/juegos/17410/it_take_two/fotos/ficha/it_take_two-5764809.jpg" alt="img">
+            <h3>IT TAKES TWO</h3>
+        </div>
+
+
+
+        <div class="game-item" onclick="openModal('Five Nights at Freddys Security Breach', 
+    [
+        { url: 'https://www.mediafire.com/file/r2cwdwjmf5drqdl/F1V3N1GFR3BR34v23.08.2023_ZL.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/tg0o5am3bnwq07d/F1V3N1GFR3BR34v23.08.2023_ZL.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/y6221ezpxjgfe8u/F1V3N1GFR3BR34v23.08.2023_ZL.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/q17ufopu59xyusv/F1V3N1GFR3BR34v23.08.2023_ZL.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/fn9mgrxlzbqbw3l/F1V3N1GFR3BR34v23.08.2023_ZL.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/2n05m3mm7j3adg6/F1V3N1GFR3BR34v23.08.2023_ZL.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/2aauwq5bwr9ce1e/F1V3N1GFR3BR34v23.08.2023_ZL.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/e5qltvwe4rq3z5h/F1V3N1GFR3BR34v23.08.2023_ZL.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/gs3ev0xru3osrsp/F1V3N1GFR3BR34v23.08.2023_ZL.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/4xjj73asgnood31/F1V3N1GFR3BR34v23.08.2023_ZL.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/emcicabey4sbe3m/F1V3N1GFR3BR34v23.08.2023_ZL.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/ju7taoakkrfz92q/F1V3N1GFR3BR34v23.08.2023_ZL.part12.rar/file', name: 'ENLACE 12' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpm_tJXjAvcCZXxg-g1mN5mooMEwxpS_neEQ&s"
+                alt="img">
+            <h3>Five Nights at Freddys Security Breach</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('elden ring', 
+    [
+        { url: 'https://www.mediafire.com/file/lhza5baco87q3ly/ELD3NR1NGv1.12.0_ZonaLeRoS.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/15hlohbgkrhwt1z/ELD3NR1NGv1.12.0_ZonaLeRoS.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/5b8o6iknhqc9t8v/ELD3NR1NGv1.12.0_ZonaLeRoS.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/shv2a8p2cqw836s/ELD3NR1NGv1.12.0_ZonaLeRoS.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/3rixfptmdvfidv5/ELD3NR1NGv1.12.0_ZonaLeRoS.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/j4zyyxim2f1gs3j/ELD3NR1NGv1.12.0_ZonaLeRoS.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/kp8erook3yjtn33/ELD3NR1NGv1.12.0_ZonaLeRoS.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/r3fzjrwritexwqa/ELD3NR1NGv1.12.0_ZonaLeRoS.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/6usfv12wuqwy5z1/ELD3NR1NGv1.12.0_ZonaLeRoS.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/zzm6qb8h02w74xv/ELD3NR1NGv1.12.0_ZonaLeRoS.part10.rar/file', name: 'ENLACE 10' },
+        { url: 'https://www.mediafire.com/file/cizo4s7pz4hzmkx/ELD3NR1NGv1.12.0_ZonaLeRoS.part11.rar/file', name: 'ENLACE 11' },
+        { url: 'https://www.mediafire.com/file/g55h10vl7nmedcq/ELD3NR1NGv1.12.0_ZonaLeRoS.part12.rar/file', name: 'ENLACE 12' },
+        { url: 'https://www.mediafire.com/file/nf7tmjr5to79aw5/ELD3NR1NGv1.12.0_ZonaLeRoS.part13.rar/file', name: 'ENLACE 13' },
+        { url: 'https://www.mediafire.com/file/h7qh4hkf9rlou5d/Eld1enRi7ngD-Update1.16.0+ZonaLeRoS.rar/file', name: 'update' },
+    ])">
+            <img src="https://store-images.s-microsoft.com/image/apps.25322.13715792864578983.571a71b5-a2e5-4970-8492-94d49bf62526.3472539d-960d-4b45-b15a-f8c1ea9fb9dc?mode=scale&q=90&h=225&w=150&background=%23FFFFFF"
+                alt="img">
+            <h3>elden ring</h3>
+        </div>
+
+        <div class="game-item" onclick="openModal('moving out 1', 
+    [
+        { url: 'https://www.mediafire.com/file/o21145yfdg8hzyi/Mov4ingOu7t-1.3.4856.169-elamigos.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/img/cfn/11307HDZ_9QLG5Pja9ZEy1Dem-O9WXtTOBYlnBYjs26QqWwwqwj9umEUovJrt8Fm2c9Q3hAeQzS4r8R33EJXw1EOzrgAKUWX.png" alt="img">
+            <h3>moving out 1</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('moving out 2', 
+    [
+        { url: 'https://falabellape-my.sharepoint.com/:u:/r/personal/zonalerosvip_falabellape_onmicrosoft_com/Documents/ELAMIGOS%20Y%20CG/Movi2ngO2ut2-elamigos/Movi2ngO2ut2-elamigos.rar?csf=1&web=1&e=w358GA', name: 'ENLACE 01' },
+    ])">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202208/0910/r89YEqBArWZlghaQVGII0BKu.jpg" alt="img">
+            <h3>moving out 2</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('dayz', 
+    [
+        { url: 'http://www.mediafire.com/file/4zj2qzml81tkt3m', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/42e1i7dsfursikc', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/hf9yppod519dspp', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/hajs057rzq4wjta', name: 'ENLACE 04' },
+        { url: 'http://www.mediafire.com/file/q241yehd50u25sv', name: 'ENLACE 05' },
+        { url: 'http://www.mediafire.com/file/r82iod633cvae92', name: 'ENLACE 06' },
+        { url: 'http://www.mediafire.com/file/u5dwam1rkur47es', name: 'ENLACE 07' },
+        { url: 'http://www.mediafire.com/file/gdspn30k93os9hq', name: 'ENLACE 08' },
+        { url: 'http://www.mediafire.com/file/i31h738gu897367', name: 'ENLACE 09' },
+        { url: 'http://www.mediafire.com/file/mjfh8vvotfzba6n', name: 'ENLACE 10' },
+    ])">
+            <img src="https://assetsio.gnwcdn.com/co2dhb.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp" alt="img">
+            <h3>dayz</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('UNRAVEL TWO', 
+    [
+        { url: 'http://www.mediafire.com/file/32iwhhhfb7rw224', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/b04remupp77tkk4', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/tqiflq2pwijjozh', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/9fe9ev932d4fp0s', name: 'ENLACE 04' },
+    ])">
+            <img src="https://image.api.playstation.com/cdn/UP0006/CUSA10483_00/7F2aA7ckAa0YROMt50NhDcwSaR31SE9a.png" alt="img">
+            <h3>UNRAVEL TWO</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Assetto Corsa EVO', 
+    [
+        { url: 'https://www.mediafire.com/file/ahom0jermrh5h3u/ASS3TT0C0RS4EV0v0.1.5.part01.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/9itjg4dtcg8683s/ASS3TT0C0RS4EV0v0.1.5.part02.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/py96fo22bjzdc33/ASS3TT0C0RS4EV0v0.1.5.part03.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/0u9wqqc48hkiu5n/ASS3TT0C0RS4EV0v0.1.5.part04.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/u4h2fzivktld9tz/ASS3TT0C0RS4EV0v0.1.5.part05.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/pvrobcdt63mgrdf/ASS3TT0C0RS4EV0v0.1.5.part06.rar/file', name: 'ENLACE 06' },
+        { url: 'https://www.mediafire.com/file/qyregn1ar2r8pvf/ASS3TT0C0RS4EV0v0.1.5.part07.rar/file', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/gc1dg9djo2kvs1t/ASS3TT0C0RS4EV0v0.1.5.part08.rar/file', name: 'ENLACE 08' },
+        { url: 'https://www.mediafire.com/file/m6zi4n05mdd1pqn/ASS3TT0C0RS4EV0v0.1.5.part09.rar/file', name: 'ENLACE 09' },
+        { url: 'https://www.mediafire.com/file/dz1j2cn8ncj38im/ASS3TT0C0RS4EV0v0.1.5.part10.rar/file', name: 'ENLACE 10' },
+    ])">
+            <img src="https://www.gamers-shop.dk/images/game_img/askcorsaevofskl09r9025u25.jpg" alt="img">
+            <h3>Assetto Corsa EVO</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Atelier Yumia The Alchemist of Memories and the Envisioned Land ', 
+    [
+        { url: 'https://www.mediafire.com/file/s16vlgk6rsltvpt/Ateli2erYu5miaTAoMatEL-elamigos.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/ni1vsouybm9ncg9/Ateli2erYu5miaTAoMatEL-elamigos.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/clc2xzowrnhfnud/Ateli2erYu5miaTAoMatEL-elamigos.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/712j6qq8h0kk8og/Ateli2erYu5miaTAoMatEL-elamigos.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/znkm5t4ipgrxv3l/Ateli2erYu5miaTAoMatEL-elamigos.part5.rar/file', name: 'ENLACE 05' },
+    ])">
+            <img src="https://m.media-amazon.com/images/I/81CrelcBq2L.jpg" alt="img">
+            <h3>Atelier Yumia The Alchemist of Memories and the Envisioned Land </h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Little Kitty Big City', 
+    [
+        { url: 'https://www.mediafire.com/file/mg1n09z2yr7grc5/L1TTL3KTB1GC1TYv1.24.9.24.rar/file', name: 'ENLACE 01' },
+    ])">
+            <img src="https://store-images.s-microsoft.com/image/apps.42325.13605545843678606.ba639605-7305-422e-9637-2411fb07e5f6.b0cdeb87-1dea-418a-82c3-84a977c47a4b" alt="img">
+            <h3>Little Kitty Big City</h3>
+        </div>
+
+
+
+        <div class="game-item" onclick="openModal('MotoGP 24', 
+    [
+        { url: 'http://www.mediafire.com/file/91m1g6l31pn3f1m', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/ifab7k872ypcipe', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/8r24pppyag5mh9b', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/ba7zv4ook3itk01', name: 'ENLACE 04' },
+        { url: 'http://www.mediafire.com/file/srl8kv7ubvnel7t', name: 'ENLACE 05' },
+        { url: 'http://www.mediafire.com/file/j75irwgsyi822to', name: 'ENLACE 06' },
+        { url: 'http://www.mediafire.com/file/577r6gkx16oz1se', name: 'ENLACE 07' },
+        { url: 'https://www.mediafire.com/file/ou5rc9lbf382nob/Mo2t4oGP2-Update06.02.2025-elamigos.rar/file', name: 'update' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCDOJmxewPctBx1eZQvCsgJiD5r1lgNzXkwg&s" alt="img">
+            <h3>MotoGP 24</h3>
+        </div>
+
+
+
+        <div class="game-item" onclick="openModal('Need for Speed Shift 2', 
+    [
+        { url: 'https://www.mediafire.com/file/1sfejgh2u9usrbp/Shiw5ft2U-EA-elamigos.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/h9quir2xotqfywu/Shiw5ft2U-EA-elamigos.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/grvhdarftfb6ifl/Shiw5ft2U-EA-elamigos.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'https://www.mediafire.com/file/f9d64wfxn0u0raw/Shiw5ft2U-EA-elamigos.part4.rar/file', name: 'ENLACE 04' },
+        { url: 'https://www.mediafire.com/file/8fthdpn0yryg2md/Shiw5ft2U-EA-elamigos.part5.rar/file', name: 'ENLACE 05' },
+        { url: 'https://www.mediafire.com/file/ltj7ycu70wdj182/Shiw5ft2U-EA-elamigos.part6.rar/file', name: 'ENLACE 06' },
+    ])">
+            <img src="https://m.media-amazon.com/images/M/MV5BNGRlZTk2MTEtYzg0Zi00YmRkLWIxODAtYTljMDM2MjE1MWZlXkEyXkFqcGc@._V1_.jpg" alt="img">
+            <h3>Need for Speed Shift 2</h3>
+        </div>
+
+
+
+        <div class="game-item" onclick="openModal('World War Z Aftermath Deluxe Edition', 
+    [
+        { url: 'http://www.mediafire.com/file/y10wgwmwh9d5q56', name: 'ENLACE 01' },
+        { url: 'http://www.mediafire.com/file/6fz74i4uainna4d', name: 'ENLACE 02' },
+        { url: 'http://www.mediafire.com/file/5m5q6hevlzc8koa', name: 'ENLACE 03' },
+        { url: 'http://www.mediafire.com/file/8ar4zx6aa1tls2u', name: 'ENLACE 04' },
+        { url: 'http://www.mediafire.com/file/tez2dwlmjy6hvxc', name: 'ENLACE 05' },
+        { url: 'http://www.mediafire.com/file/3ajxhj3ipk8k0kw', name: 'ENLACE 06' },
+        { url: 'http://www.mediafire.com/file/3mdvw49gu67cq1l', name: 'ENLACE 07' },
+        { url: 'http://www.mediafire.com/file/7a0pjtv2qhm4g0c', name: 'ENLACE 08' },
+        { url: 'http://www.mediafire.com/file/3orfah0ae055dcr', name: 'ENLACE 09' },
+        { url: 'http://www.mediafire.com/file/acan6qir08dxs7z', name: 'ENLACE 10' },
+        { url: 'http://www.mediafire.com/file/rs8y0jv91op83nb', name: 'ENLACE 11' },
+        { url: 'http://www.mediafire.com/file/ullz9utvukxk8oc', name: 'ENLACE 12' },
+        { url: 'http://www.mediafire.com/file/ukxeafjwud8a3u4', name: 'ENLACE 13' },
+        { url: 'http://www.mediafire.com/file/om60bsweoagwsux', name: 'ENLACE 14' },
+        { url: 'http://www.mediafire.com/file/30u3yiylxhwmbmd', name: 'ENLACE 15' },
+        { url: 'http://www.mediafire.com/file/qyq41n0xnumh97o', name: 'ENLACE 16' },
+        { url: 'http://www.mediafire.com/file/vcd04g616btfljx', name: 'ENLACE 17' },
+        { url: 'http://www.mediafire.com/file/sdoqo810d0d4uoh', name: 'ENLACE 18' },
+        { url: 'http://www.mediafire.com/file/8mtu6uguxk7r63n', name: 'ENLACE 19' },
+        { url: 'https://www.mediafire.com/file/e5z7kip8pk0bry6/Wor1ldWa2r-Update05.12.2024-elamigos.part1.rar/file', name: 'update 1' },
+        { url: 'https://www.mediafire.com/file/ngrdafwwbv4vmii/Wor1ldWa2r-Update05.12.2024-elamigos.part2.rar/file', name: 'update 2' },
+        { url: 'https://www.mediafire.com/file/ujv9tq41h52wvke/Wor1ldWa2r-Update05.12.2024-elamigos.part3.rar/file', name: 'update 3' },
+    ])">
+            <img src="https://cdn1.epicgames.com/salesEvent/salesEvent/wwzAfterDeluxe_Tall_1200x1600-e3bf4e93204a339c0581a84ea264a3f4" alt="img">
+            <h3>World War Z Aftermath Deluxe Edition</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('Dragon Ball FighterZ Ultimate Edition', 
+    [
+        { url: 'https://www.mediafire.com/file/f3p5bmsyg5xbxgo/Dra6gonBF1gh3t3rZUlt1ma7teE-1.31-elamigos.part1.rar/file', name: 'ENLACE 01' },
+        { url: 'https://www.mediafire.com/file/ysq6bu0au9pgehf/Dra6gonBF1gh3t3rZUlt1ma7teE-1.31-elamigos.part2.rar/file', name: 'ENLACE 02' },
+        { url: 'https://www.mediafire.com/file/wxqqz41edu1jwzx/Dra6gonBF1gh3t3rZUlt1ma7teE-1.31-elamigos.part3.rar/file', name: 'ENLACE 03' },
+        { url: 'mediafire.com/file/pvoce7xgde7rkh8/Dra6gonBFigh3terZUltima7te-CrackFixWin11-elamigos.rar/file', name: 'update' },
+    ])">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTXWbV5FtWV6pAiYLcFJdxy07NIIumVe0k_A&s" alt="img">
+            <h3>Dragon Ball FighterZ Ultimate Edition</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('NOMBRE', 
+    [
+        { url: 'LINK', name: 'ENLACE 01' },
+        { url: 'LINK', name: 'ENLACE 02' },
+        { url: 'LINK', name: 'ENLACE 03' },
+        { url: 'LINK', name: 'ENLACE 04' },
+        { url: 'LINK', name: 'ENLACE 05' },
+        { url: 'LINK', name: 'ENLACE 06' },
+        { url: 'LINK', name: 'ENLACE 07' },
+        { url: 'LINK', name: 'ENLACE 08' },
+        { url: 'LINK', name: 'ENLACE 09' },
+        { url: 'LINK', name: 'ENLACE 10' },
+        { url: 'LINK', name: 'ENLACE 11' },
+        { url: 'LINK', name: 'ENLACE 12' },
+        { url: 'LINK', name: 'ENLACE 13' },
+        { url: 'LINK', name: 'ENLACE 14' },
+        { url: 'LINK', name: 'ENLACE 15' },
+    ])">
+            <img src="IMG" alt="img">
+            <h3>NOMBRE</h3>
+        </div>
+
+
+
+        <div class="game-item" onclick="openModal('NOMBRE', 
+    [
+        { url: 'LINK', name: 'ENLACE 01' },
+        { url: 'LINK', name: 'ENLACE 02' },
+        { url: 'LINK', name: 'ENLACE 03' },
+        { url: 'LINK', name: 'ENLACE 04' },
+        { url: 'LINK', name: 'ENLACE 05' },
+        { url: 'LINK', name: 'ENLACE 06' },
+        { url: 'LINK', name: 'ENLACE 07' },
+        { url: 'LINK', name: 'ENLACE 08' },
+        { url: 'LINK', name: 'ENLACE 09' },
+        { url: 'LINK', name: 'ENLACE 10' },
+        { url: 'LINK', name: 'ENLACE 11' },
+        { url: 'LINK', name: 'ENLACE 12' },
+        { url: 'LINK', name: 'ENLACE 13' },
+        { url: 'LINK', name: 'ENLACE 14' },
+        { url: 'LINK', name: 'ENLACE 15' },
+    ])">
+            <img src="IMG" alt="img">
+            <h3>NOMBRE</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('NOMBRE', 
+    [
+        { url: 'LINK', name: 'ENLACE 01' },
+        { url: 'LINK', name: 'ENLACE 02' },
+        { url: 'LINK', name: 'ENLACE 03' },
+        { url: 'LINK', name: 'ENLACE 04' },
+        { url: 'LINK', name: 'ENLACE 05' },
+        { url: 'LINK', name: 'ENLACE 06' },
+        { url: 'LINK', name: 'ENLACE 07' },
+        { url: 'LINK', name: 'ENLACE 08' },
+        { url: 'LINK', name: 'ENLACE 09' },
+        { url: 'LINK', name: 'ENLACE 10' },
+        { url: 'LINK', name: 'ENLACE 11' },
+        { url: 'LINK', name: 'ENLACE 12' },
+        { url: 'LINK', name: 'ENLACE 13' },
+        { url: 'LINK', name: 'ENLACE 14' },
+        { url: 'LINK', name: 'ENLACE 15' },
+    ])">
+            <img src="IMG" alt="img">
+            <h3>NOMBRE</h3>
+        </div>
+
+
+        <div class="game-item" onclick="openModal('NOMBRE', 
+    [
+        { url: 'LINK', name: 'ENLACE 01' },
+        { url: 'LINK', name: 'ENLACE 02' },
+        { url: 'LINK', name: 'ENLACE 03' },
+        { url: 'LINK', name: 'ENLACE 04' },
+        { url: 'LINK', name: 'ENLACE 05' },
+        { url: 'LINK', name: 'ENLACE 06' },
+        { url: 'LINK', name: 'ENLACE 07' },
+        { url: 'LINK', name: 'ENLACE 08' },
+        { url: 'LINK', name: 'ENLACE 09' },
+        { url: 'LINK', name: 'ENLACE 10' },
+        { url: 'LINK', name: 'ENLACE 11' },
+        { url: 'LINK', name: 'ENLACE 12' },
+        { url: 'LINK', name: 'ENLACE 13' },
+        { url: 'LINK', name: 'ENLACE 14' },
+        { url: 'LINK', name: 'ENLACE 15' },
+    ])">
+            <img src="IMG" alt="img">
+            <h3>NOMBRE</h3>
+        </div>
+
+
+
+
+        <div class="pagination">
+            <button id="prevPage" onclick="changePage(-1)" disabled>Anterior</button>
+            <button id="nextPage" onclick="changePage(1)">Siguiente</button>
+            <div class="page-info" id="pageInfo">Página 1 de 1</div> <!-- Información de la página -->
+        </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content"><span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalLinks"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
+
+
+<!--
+
+<div class="game-item" onclick="openModal('NOMBRE', 
+    [
+        { url: 'LINK', name: 'ENLACE 01' },
+        { url: 'LINK', name: 'ENLACE 02' },
+        { url: 'LINK', name: 'ENLACE 03' },
+        { url: 'LINK', name: 'ENLACE 04' },
+        { url: 'LINK', name: 'ENLACE 05' },
+        { url: 'LINK', name: 'ENLACE 06' },
+        { url: 'LINK', name: 'ENLACE 07' },
+        { url: 'LINK', name: 'ENLACE 08' },
+        { url: 'LINK', name: 'ENLACE 09' },
+        { url: 'LINK', name: 'ENLACE 10' },
+        { url: 'LINK', name: 'ENLACE 11' },
+        { url: 'LINK', name: 'ENLACE 12' },
+        { url: 'LINK', name: 'ENLACE 13' },
+        { url: 'LINK', name: 'ENLACE 14' },
+        { url: 'LINK', name: 'ENLACE 15' },
+    ])">
+            <img src="IMG" alt="img">
+            <h3>NOMBRE</h3>
+        </div>
+        
+-->
