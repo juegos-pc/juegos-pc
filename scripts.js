@@ -1,5 +1,5 @@
 let currentPage = 1;
-        const itemsPerPage = 20; // Número de elementos por página
+        const itemsPerPage = 30; // Número de elementos por página
         const gameItems = document.querySelectorAll('.game-item');
         const totalPages = Math.ceil(gameItems.length / itemsPerPage);
 
