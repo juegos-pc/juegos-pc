@@ -1,9 +1,8 @@
 body {
+    background: black;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,6 +77,9 @@ nav li:hover {
 }
 
 .game-list {
+    
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -103,18 +105,19 @@ nav li:hover {
 }
 
 /* Pagination Buttons */
-.page-info{
+.page-info {
     background: black;
     width: auto;
     height: 25px;
 }
+
 .pagination {
     position: fixed;
     bottom: 1px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    
+
 }
 
 .pagination button {
@@ -174,4 +177,101 @@ nav li:hover {
 
 #modalLinks a:hover {
     text-decoration: underline;
+}
+
+/*CHAT AYUDANTE*/
+
+/* Burbuja flotante */
+#botBubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #666666;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+/* Ventana del chat */
+#chatWindow {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 998;
+}
+
+#chatHeader {
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#chatbox {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.user,
+.bot {
+    margin: 5px 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    max-width: 75%;
+    word-wrap: break-word;
+}
+
+.user {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    align-self: flex-end;
+    text-align: right;
+}
+
+.bot {
+    background-color: #d2d2d2;
+    align-self: flex-start;
+    text-align: left;
+}
+
+#inputArea {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+#sendBtn {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
