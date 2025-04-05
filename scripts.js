@@ -90,9 +90,35 @@ const chatbox = document.getElementById('chatbox');
 const userInput = document.getElementById('userInput');
 const sendBtn = document.getElementById('sendBtn');
 
+let saludado = false;
+
 // Abrir o cerrar chat al tocar la burbuja
-botBubble.addEventListener('click', () => {
-    chatWindow.style.display = chatWindow.style.display === 'none' ? 'flex' : 'none';
+botBubble.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que el evento se propague al document
+    const estaOculto = chatWindow.style.display === 'none';
+    chatWindow.style.display = estaOculto ? 'flex' : 'none';
+
+    if (estaOculto && !saludado) {
+        setTimeout(() => {
+            agregarMensaje("bot", "¡Hola! soy Descarguito, tu ayudante virtual 🤖. ¿En qué te puedo ayudar hoy?");
+        }, 500);
+        saludado = true;
+    }
+});
+
+// Cerrar chat si se hace clic fuera de la ventana del bot
+document.addEventListener('click', (e) => {
+    if (
+        !chatWindow.contains(e.target) && 
+        !botBubble.contains(e.target)
+    ) {
+        chatWindow.style.display = 'none';
+    }
+});
+
+// Evitar que los clics dentro del chat cierren la ventana
+chatWindow.addEventListener('click', (e) => {
+    e.stopPropagation();
 });
 
 // Enviar mensaje
@@ -127,9 +153,7 @@ function responderBot(pregunta) {
 
     const respuestas = [
         { palabras: ["contraseña", "contraseñas"], respuesta: 'Puedes visitar nuestra <a id="respuestas" href="contraseñas.html" target="_blank">contraseñas</a>.' },
-        { palabras: ["ayuda", "contacto","emergencia","pedir","juego","roto"], respuesta: 'si necesita ayuda o pedir algo visite esta pagina <a href="contacto.html" target="_blank">contacto</a>.' },
-        
-        { palabras: ["hello","hola","buenas","que tal","todo bien","bien"], respuesta: "Hola, en que puedo ayudarle? 😁" },
+        { palabras: ["ayuda", "contacto", "emergencia", "pedir", "juego", "roto"], respuesta: 'Si necesita ayuda o pedir algo visite esta página: <a href="contacto.html" target="_blank">contacto</a>.' },
         { palabras: ["gracias"], respuesta: "¡De nada! Estoy aquí para ayudarte 🤖" },
         { palabras: ["adiós", "chao"], respuesta: "¡Hasta luego! 👋" },
     ];
