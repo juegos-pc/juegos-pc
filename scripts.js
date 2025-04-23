@@ -27,22 +27,22 @@ function changePage(direction) {
     showPage(currentPage);
 }
 
-function openModal(title, links) {
+function openModal(title, links, score) {
     const modalTitle = document.getElementById('modalTitle');
     const modalLinks = document.getElementById('modalLinks');
-
+  
     modalTitle.innerText = title;
-    modalLinks.innerHTML = ''; // Limpiar los enlaces anteriores
+    modalLinks.innerHTML = '';
     links.forEach(link => {
-        const a = document.createElement('a');
-        a.href = link.url;
-        a.target = '_blank';
-        a.textContent = link.name;
-        modalLinks.appendChild(a);
+      const a = document.createElement('a');
+      a.href = link.url;
+      a.target = '_blank';
+      a.textContent = link.name;
+      modalLinks.appendChild(a);
     });
-
+  
     document.getElementById('myModal').style.display = 'flex';
-}
+  }
 
 function closeModal() {
     document.getElementById('myModal').style.display = 'none';
